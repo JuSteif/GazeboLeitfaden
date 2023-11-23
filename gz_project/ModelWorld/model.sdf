@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="world_model">
+    <link name="testlink">
+      <visual name="T-Wall">
+        <geometry>
+          <mesh>
+            <uri>model.dae</uri>
+            <submesh>
+              <name>T-Wall</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="L-Wall_long_1.75m+0.5m ">
+        <geometry>
+          <mesh>
+            <uri>model.dae</uri>
+            <submesh>
+              <name>L-Wall_long_1.75m+0.5m </name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="L-Wall_short_1.00m+0.5m">
+        <geometry>
+          <mesh>
+            <uri>model.dae</uri>
+            <submesh>
+              <name>L-Wall_short_1.00m+0.5m</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="remesh_Room">
+        <geometry>
+          <mesh>
+            <uri>model.dae</uri>
+            <submesh>
+              <name>remesh_Room</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Grid_Walls">
+        <geometry>
+          <mesh>
+            <uri>model.dae</uri>
+            <submesh>
+              <name>Grid_Walls</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Grid_Floor">
+        <geometry>
+          <mesh>
+            <uri>model.dae</uri>
+            <submesh>
+              <name>Grid_Floor</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name="Abluft_Front">
+        <geometry>
+          <mesh>
+            <uri>model.dae</uri>
+            <submesh>
+              <name>Abluft_Front</name>
+            </submesh>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model.dae</uri>
+          </mesh>
+        </geometry>
+        <surface/>
+        <contact/>
+        <collide_bitmask>0x01</collide_bitmask>
+      </collision>
+    </link>
+  </model>
+  <static>true</static>
+</sdf>

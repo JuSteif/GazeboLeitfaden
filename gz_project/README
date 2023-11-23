@@ -1,0 +1,34 @@
+World start Laserscan
+    gz sim project_world.sdf
+
+World start PointCloud
+    gz sim project_world_lidar64.sdf
+
+World start Cmaera + PointCloud
+    gz sim project_world_camera_lidar64.sdf
+
+Bridge run all bridges
+    ros2 run ros_gz_bridge parameter_bridge --ros-args -p config_file:=bridge_runner.yaml
+
+Bridge keyboard
+    ros2 run ros_gz_bridge parameter_bridge /model/vehicle_blue/cmd_vel@geometry_msgs/msg/Twist]gz.msgs.Twist
+
+Bridge lidar laser_scan
+    ros2 run ros_gz_bridge parameter_bridge /lidar@sensor_msgs/msg/LaserScan@gz.msgs.LaserScan
+
+Bridge lidar point cloud
+    ros2 run ros_gz_bridge parameter_bridge /lidar/points@sensor_msgs/msg/PointCloud2@gz.msgs.PointCloudPacked
+
+Bridge camera
+    ros2 run ros_gz_bridge parameter_bridge /cam@sensor_msgs/msg/Image@gz.msgs.Image
+
+Rviz2
+    rviz2 
+        fixed Frame: vehicle_blue/chassis/gpu_lidar
+
+Teleop
+    ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r /cmd_vel:=/cmd_vel
+
+Fog genenrator control
+    gz topic -t /model/fog_generator/link/fog_link/particle_emitter/emitter/cmd -m gz.msgs.ParticleEmitter -p 'rate: {data: 100}'
+    gz topic -t /model/fog_generator/link/fog_link/particle_emitter/emitter/cmd -m gz.msgs.ParticleEmitter -p 'emitting: {data: true}'
