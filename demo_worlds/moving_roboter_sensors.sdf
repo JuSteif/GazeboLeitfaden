@@ -17,6 +17,12 @@
             filename="libgz-sim-scene-broadcaster-system.so"
             name="gz::sim::systems::SceneBroadcaster">
         </plugin> 
+        <plugin 
+	        filename="libgz-sim-sensors-system" 
+	        name="gz::sim::systems::Sensors">
+ 	        <render_engine>ogre2</render_engine>
+        </plugin>
+
 
         <gui fullscreen="0">
 
@@ -85,6 +91,9 @@
 
             <!-- Entity tree -->
             <plugin filename="EntityTree" name="Entity tree">
+            </plugin>
+
+            <plugin filename="VisualizeLidar" name="VisualizeLidar">
             </plugin>
 
         </gui>
@@ -170,6 +179,53 @@
                     </geometry>
                 </collision>
 
+                <sensor name='gpu_lidar' type='gpu_lidar'>"
+                    <pose relative_to='lidar_frame'>0 0 0 0 0 0</pose>
+                    <topic>lidar</topic>
+                    <update_rate>10</update_rate>
+                    <ray>
+                        <scan>
+                            <horizontal>
+                                <samples>640</samples>
+                                <resolution>1</resolution>
+                                <min_angle>-1.396263</min_angle>
+                                <max_angle>1.396263</max_angle>
+                            </horizontal>
+                            <vertical>
+                                <samples>64</samples>
+                                <resolution>1</resolution>
+                                <min_angle>-0.261799</min_angle>
+                                <max_angle>0.3</max_angle>
+                            </vertical>
+                        </scan>
+                        <range>
+                            <min>0.08</min>
+                            <max>10.0</max>
+                            <resolution>0.01</resolution>
+                        </range>
+                    </ray>
+                    <always_on>1</always_on>
+                    <visualize>true</visualize>
+                </sensor>
+
+                <sensor name="camera" type="camera">
+                    <pose relative_to='lidar_frame'>0 0 0 0 0 0</pose>
+                    <topic>cam</topic>
+                    <camera>
+                        <horizontal_fov>1.047</horizontal_fov>
+                        <image>
+                        <width>800</width>
+                        <height>600</height>
+                        </image>
+                        <clip>
+                        <near>0.1</near>
+                        <far>10</far>
+                        </clip>
+                    </camera>
+                    <always_on>1</always_on>
+                    <update_rate>30</update_rate>
+                    <visualize>true</visualize>
+                </sensor>
             </link>
 
             <link name='left_wheel'>
