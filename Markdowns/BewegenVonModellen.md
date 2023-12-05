@@ -2,7 +2,7 @@
 
 ## Anpassung der SDF-File
 
-Um ein Modell bewegen zu können wird ein Plugin unter dem model-Tag hinzugefügt. Für diesen Schritt wird das Robotermodell aus dem Kapitel „Modelle" benötigt.
+Um ein Modell bewegen zu können, wird ein Plugin unter dem model-Tag hinzugefügt. Für diesen Schritt wird das Robotermodell aus dem Kapitel „Modelle" benötigt.
 ```
 <plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
     <left_joint>left_wheel_joint</left_joint>
@@ -32,7 +32,7 @@ Beim Start der Welt, wird mit drücken des Playbuttons die Simulation gestartet.
 gz sim moving\_roboter.sdf
 ```
 
-In einem neuen Terminal wird zum bewegen des Roboters der folgende Befehl aufgerufen:
+In einem neuen Terminal wird zum Bewegen des Roboters der folgende Befehl aufgerufen:
 ```
 gz topic -t "/cmd\_vel" -m gz.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.05}"
 ```
