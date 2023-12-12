@@ -1,4 +1,4 @@
-# Partikelemitter
+﻿# Partikelemitter
 
 ## SDF-File Anpassung
 
@@ -40,11 +40,11 @@ Mit diesem Befehl ist die Bibliothek eingebunden. Im nächsten Schritt muss ein 
 </model>
 ```
 
-Bei dem Nebelgenerator, handelt es um ein Modell von Fuel:
+Bei dem Nebelgenerator handelt es um ein Modell von Fuel:
 
 [Fog Generator](https://app.gazebosim.org/OpenRobotics/fuel/models/Fog%20Generator)
 
-Dem Partikelemitter werden Informationen zur Aussehen der Partikel, der Größe des Emitterbereichs und die Geschwindigkeit der Partikel übergeben.
+Dem Partikelemitter werden Informationen zum Aussehen der Partikel, der Größe des Emitterbereichs und der Partikelgeschwindigkeit übergeben.
 
 ![](Images/Fog.png)
 
@@ -54,7 +54,7 @@ Eine Beispielwelt mit dem Partikelemitter liegt unter folgendem Link:
 
 ## Nutzung des Partikelemitters
 
-Zum steuern des Partikelemitters verfügt dieser über eine Topic, dafür muss die Simulation in Gazebo gestartet werden. Mit dieser kann die Emittierungsgeschwindigkeit und der Aktivzustand des Nebelgenerators beeinflusst werden.
+Zum Steuern des Partikelemitters verfügt dieser über eine Topic. Hierfür muss die Simulation in Gazebo gestartet werden, sodass die Emittierungsgeschwindigkeit und der Aktivzustand des Nebelgenerators beeinflusst werden können.
 ```
 gz topic -t /model/fog\_generator/link/fog\_link/particle\_emitter/emitter/cmd -m gz.msgs.ParticleEmitter -p 'emitting: {data: true}'
 ```
@@ -64,4 +64,4 @@ Mit diesem Befehl wird der Emitter an- oder abgeschaltet. Im data-Feld kann entw
 gz topic -t /model/fog\_generator/link/fog\_link/particle\_emitter/emitter/cmd -m gz.msgs.ParticleEmitter -p 'rate: {data: 100}'
 ```
 
-Dieser Befehl steuert die Rate, mit der Partikel emittiert werden. Im data-Feld wird eine Zahl zwischen 0 und 100 eingegeben, diese steht für den Prozentsatz mit dem Partikel emittiert werden.
+Dieser Befehl steuert die Rate, mit der Partikel emittiert werden. Im data-Feld wird eine Zahl zwischen 0 und 100 eingegeben. Diese zeigt den Prozentsatz an, mit dem Partikel emittiert werden.

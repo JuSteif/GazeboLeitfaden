@@ -1,8 +1,8 @@
-# Sensoren
+﻿# Sensoren
 
 ## Anpassung der SDF-File
 
-Die Sensor Bibliothek wir über ein Plugin in die Welt eingefügt.
+Die Sensor Bibliothek wird über ein Plugin in die Welt eingefügt.
 ```
 <plugin 
 	filename="libgz-sim-sensors-system" 
@@ -57,7 +57,7 @@ Unter dem link-Tag „chassis" wird der Sensor hinzugefügt.
 
 ```
 
-Dem Sensor werden Eigenschaften zum Sichtfeld, Reichweite und dem Aktivstatus übergeben. Auf die Topic „lidar" werden die Sensordaten veröffentlicht.
+Dem Sensor werden Eigenschaften zum Sichtfeld, Reichweite und dem Aktivstatus übergeben und auf der Topic „lidar" veröffentlicht.
 
 ## Kamera
 
@@ -87,7 +87,7 @@ Die Kamera hat einen ähnlichen Aufbau wie der LiDAR-Sensor. Zusätzlich wird st
 
 ## Verwendung der Sensoren
 
-Eine Beispielwelt mit den Sensoren ist unter folgendem Link:
+Eine Beispielwelt mit den Sensoren ist unter folgendem Link zu finden:
 
 [moving\_roboter\_sensors.sdf](../demo_worlds/moving_roboter_sensors.sdf)
 

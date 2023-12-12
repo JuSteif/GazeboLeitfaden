@@ -1,4 +1,4 @@
-# Blender SDF-Exporter
+﻿# Blender SDF-Exporter
 
 ## Exportscript
 
@@ -6,7 +6,7 @@ Für den Export von Blendermodellen gibt es ein eigenes Python-Script. Dieses ka
 
 [sdf\_exporter.py](https://github.com/gazebosim/gz-sim/blob/ign-gazebo5/examples/scripts/blender/sdf_exporter.py)
 
-Beim Öffnen von Blender muss das zu exportierende Modell geladen werden. Im Editor befindet sich am oberen Rand der Reiter „Scripting" in diesem wird das heruntergeladene Script geöffnet. Im sich öffnenden Fenster kann man den Speicherort auswählen.
+Beim Öffnen von Blender muss das zu exportierende Modell geladen werden. Im Editor befindet sich am oberen Rand der Reiter „Scripting". In diesem wird das heruntergeladene Script geöffnet. Im sich öffnenden Fenster kann man den Speicherort auswählen.
 
 ![](Images/BlenderEditor.png)
 
@@ -14,7 +14,7 @@ Beim Öffnen von Blender muss das zu exportierende Modell geladen werden. Im Edi
 
 ![](Images/BlenderFileBrowser.png)
 
-Der entstandene Ordner kann in das eigene Projekt mit Hilfe des include-Tags eingebunden werden. Dieser wird in den world-Tag eingebunden.
+Der entstandene Ordner kann in das eigene Projekt mit Hilfe des include-Tags eingebunden werden, welcher wiederum in den world-Tag eingebunden wird.
 ```
 <include>
 	<uri>model://ModelSDF/model.sdf</uri>
@@ -35,8 +35,8 @@ Der entstandene Ordner kann in das eigene Projekt mit Hilfe des include-Tags ein
 
 ## Fehlerbehebung des Scriptes
 
-Das .dae-File wird im Subordner „meshes" abgelegt. Das SDF-File bezieht sich aber auf den übergeordneten Ordner, deshalb muss das Mesh in diesen kopiert werden.
+Das .dae-File wird im Subordner „meshes" abgelegt, bezieht sich aber auf den übergeordneten Ordner. Deshalb muss das Mesh in diesen kopiert werden.
 
 Alle SDF-Modelle werden „test" genannt. Falls mehr als ein exportiertes Modell eingebunden wird, muss der Name angepasst werden.
 
-Das Exportscript kann keinen 3D-Scan exportieren. Alle Meshes müssen aus echten 3D-Formen bestehen. Es dürfen keine allein stehenden Flächen im Modell sein.
+Das Exportscript kann keinen 3D-Scan exportieren. Alle Meshes müssen aus echten 3D-Formen bestehen und es dürfen keine allein stehenden Flächen im Modell enthalten sein.

@@ -1,4 +1,4 @@
-# Bewegen von Modellen
+﻿# Bewegen von Modellen
 
 ## Anpassung der SDF-File
 
@@ -15,7 +15,7 @@ Um ein Modell bewegen zu können, wird ein Plugin unter dem model-Tag hinzugefü
 
 ```
 
-In diesem Beispiel wird ein Achsdifferentialantrieb verwendet. Dieser benötigt die beiden Joints an denen die Räder sitzen und deren Umfang für die Simulation der Achse. Der Antrieb kann über die Topic /cmd\_vel gesteuert werden. Dabei handelt es sich um eine Twist-Message und wird analog zur ROS-Topic verwendet.
+In diesem Beispiel wird ein Achsdifferentialantrieb verwendet. Dieser benötigt die beiden Joints, an denen die Räder sitzen, und deren Umfang für die Simulation der Achse. Der Antrieb kann über die Topic /cmd\_vel gesteuert werden. Dabei handelt es sich um eine Twist-Message, die analog zur ROS-Topic verwendet wird.
 
 Das Robotermodell aus dem Kapitel „Modelle" wird um das Differential erweitert:
 
@@ -27,7 +27,7 @@ Eine beispielhafte Welt mit dem Roboter befindet sich unter folgendem Link:
 
 [moving\_roboter.sdf](../demo_worlds/moving_roboter.sdf)
 
-Beim Start der Welt, wird mit drücken des Playbuttons die Simulation gestartet.
+Beim Start der Welt wird mit dem Drücken des Playbuttons die Simulation gestartet.
 ```
 gz sim moving\_roboter.sdf
 ```
@@ -39,8 +39,8 @@ gz topic -t "/cmd\_vel" -m gz.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.05
 
 Der Roboter fährt eine Kreisbahn. Dabei haben die Parameter folgende Bedeutung:
 
--t: Die Topic die angesprochen wird
+-t: Die Topic, die angesprochen wird
 
 -m: Der Typ der Nachricht
 
--p: Die Daten die gesendet werden
+-p: Die Daten, die gesendet werden
