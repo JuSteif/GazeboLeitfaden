@@ -10,7 +10,8 @@ Inhalte des Leitfadens sind:
 4.	[Bewegen von Modellen](Markdowns/BewegenVonModellen.md)
 5.	[Verwenden des Partikelemitters](Markdowns/ParticleEmitter.md)
 6.	[Verwendung von Sensoren](Markdowns/Sensoren.md)
-7.	[Verwendung der ROS-Bridge](Markdowns/ROS.md)
+7.	[Blender Import](Markdowns/BlenderExporter.md)
+8.	[Verwendung der ROS-Bridge](Markdowns/ROS.md)
 
 Videos für die einzelnen Kapitel befinden sich unter folgendem Link:
 https://1drv.ms/f/s!AkI6KG5XAjkciGtDq3a-fvTR3uSg?e=3VqKK8
