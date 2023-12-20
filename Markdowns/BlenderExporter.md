@@ -40,3 +40,5 @@ Das .dae-File wird im Subordner „meshes" abgelegt, bezieht sich aber auf den �
 Alle SDF-Modelle werden „test" genannt. Falls mehr als ein exportiertes Modell eingebunden wird, muss der Name angepasst werden.
 
 Das Exportscript kann keinen 3D-Scan exportieren. Alle Meshes müssen aus echten 3D-Formen bestehen und es dürfen keine allein stehenden Flächen im Modell enthalten sein.
+
+[Main Page](../README.md)
