@@ -4,7 +4,7 @@
 
 Für den Export von Blendermodellen gibt es ein eigenes Python-Script. Dieses kann man unter folgendem Link finden:
 
-[sdf\_exporter.py](https://github.com/gazebosim/gz-sim/blob/ign-gazebo5/examples/scripts/blender/sdf_exporter.py)
+[sdf_exporter.py](https://github.com/gazebosim/gz-sim/blob/ign-gazebo5/examples/scripts/blender/sdf_exporter.py)
 
 Beim Öffnen von Blender muss das zu exportierende Modell geladen werden. Im Editor befindet sich am oberen Rand der Reiter „Scripting". In diesem wird das heruntergeladene Script geöffnet. Im sich öffnenden Fenster kann man den Speicherort auswählen.
 

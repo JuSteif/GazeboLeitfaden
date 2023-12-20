@@ -11,7 +11,7 @@ Die Sensor Bibliothek wird über ein Plugin in die Welt eingefügt.
 </plugin>
 ```
 
-Im Anschluss muss der Sensor dem Roboter hinzugefügt werden. Dazu wird das moving\_roboter.sdf verwendet([moving\_roboter.sdf](../demo_worlds/moving_roboter.sdf) ). Die Anpassungen der File werden im model-Tag des vehicle\_blue definiert.
+Im Anschluss muss der Sensor dem Roboter hinzugefügt werden. Dazu wird das moving_roboter.sdf verwendet([moving_roboter.sdf](../demo_worlds/moving_roboter.sdf) ). Die Anpassungen der File werden im model-Tag des vehicle_blue definiert.
 
 ```
 <frame name="sensor_frame" attached_to="chassis">
@@ -89,11 +89,11 @@ Die Kamera hat einen ähnlichen Aufbau wie der LiDAR-Sensor. Zusätzlich wird st
 
 Eine Beispielwelt mit den Sensoren ist unter folgendem Link zu finden:
 
-[moving\_roboter\_sensors.sdf](../demo_worlds/moving_roboter_sensors.sdf)
+[moving_roboter_sensors.sdf](../demo_worlds/moving_roboter_sensors.sdf)
 
 Zu Beginn wird die Simulation gestartet.
 ```
-gz sim moving\_roboter\_sensors.sdf
+gz sim moving_roboter_sensors.sdf
 ```
 
 Wenn die Simulation läuft, erscheinen zusätzliche Gazebo-Topics.

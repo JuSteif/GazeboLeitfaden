@@ -25,16 +25,16 @@ Das Robotermodell aus dem Kapitel „Modelle" wird um das Differential erweitert
 
 Eine beispielhafte Welt mit dem Roboter befindet sich unter folgendem Link:
 
-[moving\_roboter.sdf](../demo_worlds/moving_roboter.sdf)
+[moving_roboter.sdf](../demo_worlds/moving_roboter.sdf)
 
 Beim Start der Welt wird mit dem Drücken des Playbuttons die Simulation gestartet.
 ```
-gz sim moving\_roboter.sdf
+gz sim moving_roboter.sdf
 ```
 
 In einem neuen Terminal wird zum Bewegen des Roboters der folgende Befehl aufgerufen:
 ```
-gz topic -t "/cmd\_vel" -m gz.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.05}"
+gz topic -t "/cmd_vel" -m gz.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.05}"
 ```
 
 Der Roboter fährt eine Kreisbahn. Dabei haben die Parameter folgende Bedeutung:

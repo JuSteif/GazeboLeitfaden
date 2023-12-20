@@ -50,18 +50,18 @@ Dem Partikelemitter werden Informationen zum Aussehen der Partikel, der Größe 
 
 Eine Beispielwelt mit dem Partikelemitter liegt unter folgendem Link:
 
-[particle\_emitter\_world.sdf](../demo_worlds/particle_emitter_world.sdf)
+[particle_emitter_world.sdf](../demo_worlds/particle_emitter_world.sdf)
 
 ## Nutzung des Partikelemitters
 
 Zum Steuern des Partikelemitters verfügt dieser über eine Topic. Hierfür muss die Simulation in Gazebo gestartet werden, sodass die Emittierungsgeschwindigkeit und der Aktivzustand des Nebelgenerators beeinflusst werden können.
 ```
-gz topic -t /model/fog\_generator/link/fog\_link/particle\_emitter/emitter/cmd -m gz.msgs.ParticleEmitter -p 'emitting: {data: true}'
+gz topic -t /model/fog_generator/link/fog_link/particle_emitter/emitter/cmd -m gz.msgs.ParticleEmitter -p 'emitting: {data: true}'
 ```
 
 Mit diesem Befehl wird der Emitter an- oder abgeschaltet. Im data-Feld kann entweder true oder false angegeben werden. Bei true startet der Partikelemitter, bei false stoppt er. Die Partikel, die bereits emittiert wurden, bleiben bestehen.
 ```
-gz topic -t /model/fog\_generator/link/fog\_link/particle\_emitter/emitter/cmd -m gz.msgs.ParticleEmitter -p 'rate: {data: 100}'
+gz topic -t /model/fog_generator/link/fog_link/particle_emitter/emitter/cmd -m gz.msgs.ParticleEmitter -p 'rate: {data: 100}'
 ```
 
 Dieser Befehl steuert die Rate, mit der Partikel emittiert werden. Im data-Feld wird eine Zahl zwischen 0 und 100 eingegeben. Diese zeigt den Prozentsatz an, mit dem Partikel emittiert werden.

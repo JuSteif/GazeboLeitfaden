@@ -6,7 +6,7 @@ Die Grundlage für jede Simulation in Gazebo ist die Welt. Diese definiert die U
 
 ## Grundlagen einer SDF-Welt
 
-Alle SDF-Welten starten gleich. Dazu wird eine neue File angelegt „project\_world.sdf".
+Alle SDF-Welten starten gleich. Dazu wird eine neue File angelegt „project_world.sdf".
 ```
 <?xml version="1.0" ?>
 <sdf version="1.8">
@@ -34,7 +34,7 @@ Im physics-Tag werden die Eigenschaften der Engine definiert. Das type-Attribut 
 - Simbody
 - Dart
 
-In diesem Beispiel wird dieses Attribut auf ignored gesetzt. Im max\_step\_size-Tag wird das Zeitintervall angegeben, mit dem sich die Engine aktualisiert. Im real\_time\_factor-Tag wird das Verhältnis zwischen Echtzeit und Simulationszeit angegeben.
+In diesem Beispiel wird dieses Attribut auf ignored gesetzt. Im max_step_size-Tag wird das Zeitintervall angegeben, mit dem sich die Engine aktualisiert. Im real_time_factor-Tag wird das Verhältnis zwischen Echtzeit und Simulationszeit angegeben.
 
 ## Plugins
 
@@ -148,12 +148,12 @@ Das WorldControl-Plugin ist für Kontrolle der Simulation verantwortlich. Mit di
 
 ```
 
-Das WorldStats-Plugin zeigt die Simulationsparameter an und veröffentlicht diese auf der topic /world/car\_world/stats.
+Das WorldStats-Plugin zeigt die Simulationsparameter an und veröffentlicht diese auf der topic /world/car_world/stats.
 
 Zum starten der Welt wird folgender Befehl aufgerufen:
 
 ```
-gz sim project\_world.sdf
+gz sim project_world.sdf
 ```
 
 Nach drücken des Playbuttons startet die Simulation. Mit dem folgendem Befehl lassen sich alle aktiven Topics anzeigen.
@@ -202,4 +202,4 @@ Beim starteten der Welt, sollte jetzt ein neues Element im EntityTree vorhanden 
 
 Eine Beispielwelt befindet sich unter folgendem Link:
 
-[simple\_world.sdf](../demo_worlds/simple_world.sdf)
+[simple_world.sdf](../demo_worlds/simple_world.sdf)
